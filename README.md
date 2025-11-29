@@ -2,7 +2,7 @@
 
 [![Build](https://github.com/anyvm-org/solaris-builder/actions/workflows/build.yml/badge.svg)](https://github.com/anyvm-org/solaris-builder/actions/workflows/build.yml)
 
-Latest: 
+Latest: v1.0.9
 
 
 The image builder for `solaris`
