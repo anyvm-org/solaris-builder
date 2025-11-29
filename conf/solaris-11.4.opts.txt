@@ -1,0 +1,57 @@
+
+
+To select the keyboard layout | enter
+
+select the language you wish to use | enter
+
+Please enter a numbe  | enter; sleep 2; f2
+
+#Continue | f2
+
+Select discovery method for disks | f2
+
+Where should Oracle Solaris be installed | f2 ;sleep 2; f2
+
+#Oracle Solaris can be installed on the whole disk | f2
+
+#Computer Name
+name must start | f2
+
+Select a wired network connection | f2
+
+Configure the interface | f2
+
+Select the region  | f2
+
+#Select the default 
+language | f2
+
+Select the language territory  | f2; sleep 2; f2
+
+#Date and Time | f2
+
+
+#Select your keyboard 
+Keyboard| f2
+
+#System Root 
+Password | string vmactions.org ; tab ; string vmactions.org ; f2 ; sleep 2; f2; sleep 2; f2
+
+
+#Registration | f2
+
+
+
+
+
+Reboot to start the newly | f7
+
+
+#syncing file systems... done | sleep 1
+
+#System is halted. It is now safe to power it off | sleep 1
+
+
+
+
+
