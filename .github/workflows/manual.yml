@@ -9,18 +9,18 @@ jobs:
     env:
       DEBUG: 1
       NGROK_TOKEN : ${{ secrets.NGROK_TOKEN }}
-      SEC_VBOX : ${{ secrets.SEC_VBOX }}
+      SEC_VBOX : ${{ vars.SEC_VBOX }}
     steps:
     - uses: actions/checkout@v4
     - name: Creating web console
-      uses: vmactions/cf-tunnel@v0
+      uses: anyvm-org/cf-tunnel@v0
       id: tunnel
       with:
         protocol: http
         port: 8000
     - name: Run vnc tunnel
       id: test
-      uses: vmactions/ngrok-tunnel@v0
+      uses: anyvm-org/ngrok-tunnel@v0
       with:
         protocol: tcp
         port: 5900

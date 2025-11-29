@@ -1,4 +1,9 @@
 name: "Build"
+
+permissions:
+  contents: write
+  packages: write
+
 on:
   push:
     branches:
@@ -37,7 +42,7 @@ jobs:
         os: ["11.4", "11.4-gcc"]
     runs-on: ubuntu-24.04
     env:
-      SEC_VBOX : ${{ secrets.SEC_VBOX }}
+      SEC_VBOX : ${{ vars.SEC_VBOX }}
     steps:
 #    - name: Free Disk Space (Ubuntu)
 #      uses: jlumbroso/free-disk-space@main
@@ -47,7 +52,7 @@ jobs:
 #        tool-cache: false
     - uses: actions/checkout@v4
     - name: Creating Web console
-      uses: vmactions/cf-tunnel@v0
+      uses: anyvm-org/cf-tunnel@v0
       id: tunnel
       with:
         protocol: http
@@ -65,5 +70,6 @@ jobs:
           solaris-${{ matrix.os }}.qcow2.zst*
           solaris-${{ matrix.os }}-id_rsa.pub
           solaris-${{ matrix.os }}-host.id_rsa
+          solaris-${{ matrix.os }}.xml
 
 
