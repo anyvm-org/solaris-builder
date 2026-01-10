@@ -8,6 +8,23 @@ Latest: v2.0.1
 The image builder for `solaris`
 
 
+All the supported releases are here:
+
+
+
+| Release | x86_64  |
+|---------|---------|
+| 11.4    |  ✅     |
+| 11.4-gcc|  ✅     |
+
+
+
+
+
+
+
+
+
 How to use:
 
 1. Use the [manual.yml](.github/workflows/manual.yml) to build manually.
