@@ -1,6 +1,7 @@
 
 
 [![Build](https://github.com/anyvm-org/solaris-builder/actions/workflows/build.yml/badge.svg)](https://github.com/anyvm-org/solaris-builder/actions/workflows/build.yml)
+[![Release](https://img.shields.io/github/v/release/anyvm-org/solaris-builder?include_prereleases&sort=semver)](https://github.com/anyvm-org/solaris-builder/releases)
 
 Latest: v2.0.4
 
