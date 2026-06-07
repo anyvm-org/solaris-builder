@@ -46,6 +46,6 @@ How to build:
 
     Just clone the repo. and run:
     ```bash
-    bash build.sh conf/solaris-11.4.conf
+    python3 build.py conf/solaris-11.4.conf
     ```
    
