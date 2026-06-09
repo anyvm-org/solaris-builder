@@ -41,8 +41,6 @@ jobs:
       matrix:
         os: ["11.4", "11.4-gcc", "11.4-clang-19", "11.4-gcc-14"]
     runs-on: ubuntu-24.04
-    env:
-      SEC_VBOX : ${{ vars.SEC_VBOX }}
     steps:
 #    - name: Free Disk Space (Ubuntu)
 #      uses: jlumbroso/free-disk-space@main
