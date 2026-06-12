@@ -92,3 +92,19 @@ jobs:
           solaris-${{ matrix.os }}.qemu
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
