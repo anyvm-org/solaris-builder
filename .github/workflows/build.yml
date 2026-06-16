@@ -68,6 +68,7 @@ jobs:
           solaris-${{ matrix.os }}-id_rsa.pub
           solaris-${{ matrix.os }}-host.id_rsa
           solaris-${{ matrix.os }}.qemu
+          solaris-${{ matrix.os }}.profile.json
         if-no-files-found: warn
         # qcow2.zst is already maximally compressed; gzip-recompressing the
         # bundle just burns CPU for ~0 savings.
@@ -90,6 +91,7 @@ jobs:
           solaris-${{ matrix.os }}-id_rsa.pub
           solaris-${{ matrix.os }}-host.id_rsa
           solaris-${{ matrix.os }}.qemu
+          solaris-${{ matrix.os }}.profile.json
 
 
 
