@@ -17,7 +17,7 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with: 
           token: ${{ secrets.VM_TOKEN }}
           fetch-depth: '2'
@@ -25,9 +25,10 @@ jobs:
       - name: Preparing env variables
         run: |
           git switch main || (git fetch --all && git checkout -b main origin/main)
+          git clone https://github.com/anyvm-org/base-builder.git
+          python3 base-builder/gendata.py
           . conf/all.release.conf
           echo "ALL_RELEASES=$ALL_RELEASES" >> $GITHUB_ENV
-          git clone https://github.com/anyvm-org/base-builder.git
           mkdir -p .github/tpl
           cat base-builder/.github/tpl/README.tpl.md >.github/tpl/README.tpl.md
 
@@ -40,14 +41,19 @@ jobs:
             base-builder/.github/tpl/manual.tpl.yml : .github/workflows/manual.yml
             base-builder/.github/FUNDING.yml : .github/FUNDING.yml
             base-builder/.github/workflows/readme.yml : .github/workflows/readme.yml
+            base-builder/.github/workflows/rerun.yml : .github/workflows/rerun.yml
             base-builder/build.py : build.py
 
       - name: Commit and push changes
         run: |
           git config user.email "ghactions@anyvm.org"
           git config user.name "Generate.yml"
+          for f in conf/all.release.conf .github/data/table.md .github/data/desktop.md .github/data/releases.json; do
+            test -f "$f" && git add "$f"
+          done
           git add \
             .github/workflows/readme.yml \
+            .github/workflows/rerun.yml \
             .github/workflows/manual.yml \
             .github/workflows/build.yml \
             .github/tpl/README.tpl.md \
