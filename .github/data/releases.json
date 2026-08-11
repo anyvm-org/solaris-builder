@@ -5,7 +5,7 @@
       "tag": "11.4",
       "release": "11.4",
       "arch": "x86_64",
-      "sync": "rsync,scp,nfs",
+      "sync": "rsync,scp,nfs,tar",
       "shutdown": "shutdown -y -i5 -g0",
       "desktop": false,
       "build": true
@@ -14,7 +14,7 @@
       "tag": "11.4-clang-19",
       "release": "11.4-clang-19",
       "arch": "x86_64",
-      "sync": "rsync,scp,nfs",
+      "sync": "rsync,scp,nfs,tar",
       "shutdown": "shutdown -y -i5 -g0",
       "desktop": false,
       "build": true
@@ -23,7 +23,7 @@
       "tag": "11.4-gcc",
       "release": "11.4-gcc",
       "arch": "x86_64",
-      "sync": "rsync,scp,nfs",
+      "sync": "rsync,scp,nfs,tar",
       "shutdown": "shutdown -y -i5 -g0",
       "desktop": false,
       "build": true
@@ -32,7 +32,7 @@
       "tag": "11.4-gcc-14",
       "release": "11.4-gcc-14",
       "arch": "x86_64",
-      "sync": "rsync,scp,nfs",
+      "sync": "rsync,scp,nfs,tar",
       "shutdown": "shutdown -y -i5 -g0",
       "desktop": false,
       "build": true
